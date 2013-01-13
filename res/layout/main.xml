@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <WebView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webkit"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/gallery_relative_layout"
+        android:layout_below="@+id/ZoomIn"
+        android:background="@android:color/white" />
+
+<TextView
+    android:id="@+id/textTitle"
+    style="android:textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="-15dp"
+    android:layout_toLeftOf="@+id/gList"
+    android:gravity="right|top"
+    android:includeFontPadding="true"
+    android:padding="0dp"
+    android:textColor="#990000"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    android:typeface="sans" />
+
+    <RelativeLayout
+        android:id="@+id/gallery_relative_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="105dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/left_arrow_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/arrow_left_disabled" />
+
+        <Gallery
+            android:id="@+id/gallery"
+            android:layout_width="0dip"
+            android:layout_height="105dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_toLeftOf="@+id/right_arrow_imageview"
+            android:layout_toRightOf="@+id/left_arrow_imageview"
+            android:spacing="20dip" />
+
+        <ImageView
+            android:id="@+id/right_arrow_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/arrow_right_enabled" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ZoomIn"
+        style="android:imageButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:adjustViewBounds="false"
+        android:padding="3dp"
+       android:background="@drawable/zoonin_selector"
+       
+         />
+
+    <ImageButton
+        android:id="@+id/ZoomOut"
+        style="android:imageButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ZoomIn"
+        android:adjustViewBounds="false"
+        android:padding="3dp"
+        android:layout_marginTop="3dp"
+       
+        android:background="@drawable/zoonout_selector"
+        
+        />
+
+    <ImageButton
+        android:id="@+id/gList"
+        style="android:imageButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/webkit"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="false"
+        android:background="@drawable/glist_selector"
+        android:padding="3dp" />
+
+</RelativeLayout>
